@@ -1,12 +1,13 @@
 "use strict";
 
-console.log("Hello from external JavaScript");
 
-alert("Welcome to my Website!");
-
-var faveColor = prompt("What is your favorite color?");
-
-alert("Great, " + faveColor + " is my favorite color too!");
+// console.log("Hello from external JavaScript");
+//
+// alert("Welcome to my Website!");
+//
+// var faveColor = prompt("What is your favorite color?");
+//
+// alert("Great, " + faveColor + " is my favorite color too!");
 
 
 // Movie Rental Program
@@ -23,21 +24,33 @@ alert("Great, " + faveColor + " is my favorite color too!");
 
 // Pay Calculator Program
 
-var googlePay = prompt("How much do you get paid per hour at Google?");
-var googleHours = prompt("How many hours did you work this week at Google?");
+// var googlePay = prompt("How much do you get paid per hour at Google?");
+// var googleHours = prompt("How many hours did you work this week at Google?");
+//
+// var amazonPay = prompt("How much do you get paid per hour at Amazon?");
+// var amazonHours = prompt("How many hours did you work this week at Amazon");
+//
+// var facebookPay = prompt("How much do you get paid per hour at Facebook?");
+// var facebookHours = prompt("How many hours did you work this week at Facebook?");
+//
+// function totalPayThisWeek() {
+//     var googleWeeklyEarnings = googlePay * googleHours;
+//     var amazonWeeklyEarnings = amazonPay * amazonHours;
+//     var facebookWeeklyEarnings = facebookPay * facebookHours;
+//
+//     alert("You made a total of $" + (googleWeeklyEarnings + amazonWeeklyEarnings + facebookWeeklyEarnings) + " this week!");
+// }
+//
+// totalPayThisWeek();
 
-var amazonPay = prompt("How much do you get paid per hour at Amazon?");
-var amazonHours = prompt("How many hours did you work this week at Amazon");
 
-var facebookPay = prompt("How much do you get paid per hour at Facebook?");
-var facebookHours = prompt("How many hours did you work this week at Facebook?");
+// Student Schedule Program
 
-function totalPayThisWeek() {
-    var googleWeeklyEarnings = googlePay * googleHours;
-    var amazonWeeklyEarnings = amazonPay * amazonHours;
-    var facebookWeeklyEarnings = facebookPay * facebookHours;
+var classFull = false;
+var scheduleConflict = false;
 
-    alert("You made a total of $" + (googleWeeklyEarnings + amazonWeeklyEarnings + facebookWeeklyEarnings) + " this week!");
+if (classFull === true || scheduleConflict === true) {
+    alert("Sorry you can't enroll.");
+} else {
+    alert("You are now enrolled!");
 }
-
-totalPayThisWeek();

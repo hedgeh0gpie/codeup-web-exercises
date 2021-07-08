@@ -113,3 +113,5 @@ alert("You should tip $" + calculateTip(tipPercentage, billTotal));
 function applyDiscount(fullPrice, discountPercentage) {
     return fullPrice - (fullPrice * discountPercentage);
 }
+
+// Hi Test

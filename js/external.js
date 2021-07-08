@@ -56,17 +56,25 @@
 // }
 
 
-// Product Offer Program - IN PROGRESS
+// Product Offer Program
 
 var itemsBought = prompt("How many items did you buy?");
 var validOffer = confirm("Do you have a valid coupon to apply? If you do, click 'OK'. If not, click 'Cancel'.");
 var premiumMember = confirm("Are you a premium member? If you are, click 'OK'. If not, click 'Cancel'.");
 
-if(!validOffer) {
-    alert("We're sorry, your offer isn't valid.");
-} else if (premiumMember || itemsBought > 2) {
+if ((premiumMember || itemsBought > 2) && validOffer) {
     alert("Your offer has been applied!")
 } else {
     alert("Sorry, you have to buy at full price!");
 }
+
+
+
+// if(!validOffer) {
+//     alert("We're sorry, your offer isn't valid.");
+// } else if (premiumMember || itemsBought > 2) {
+//     alert("Your offer has been applied!")
+// } else {
+//     alert("Sorry, you have to buy at full price!");
+// }
 

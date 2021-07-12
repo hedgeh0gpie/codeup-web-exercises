@@ -114,4 +114,3 @@ function applyDiscount(fullPrice, discountPercentage) {
     return fullPrice - (fullPrice * discountPercentage);
 }
 
-// Hi Test

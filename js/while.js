@@ -21,9 +21,8 @@ do {
         console.log("Sorry! I can't sell you " + conesBought + " cones.");
     }
 
-
-
     console.log("We have " + allCones + " cones left.");
+
 } while (conesBought < allCones);
 
 console.log("Yay! I sold them all!");

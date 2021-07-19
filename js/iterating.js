@@ -43,7 +43,7 @@
      * Refactor your above code to use a `forEach` loop
      */
 
-    names.forEach(function(element, index) {
+    names.forEach(function(element) {
         console.log(element);
     })
 

@@ -208,41 +208,41 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
 // }
 //
 
-// function isNumeric(input) {
-//     return !isNaN(input);
-// }
-//
-// function evenOrOddMessage(input) {
-//     return (input % 2 === 0 ? "This number is even!" : "This number is odd!");
-// }
-//
-// function numberPlus100Message(input) {
-//     return input + " plus 100 equals " + (input + 100) + "!";
-// }
-//
-// function negativePositiveMessage(input) {
-//     return input < 0 ? "This number is negative!" : "This number is positive!";
-// }
-//
-// function getUserNumAndInfo() {
-//     var enterNumber = confirm("Would you like to enter a number?")
-//     var userNumber
-//
-//     if (enterNumber) {
-//         userNumber = parseFloat(prompt("Please enter a number."));
-//         if (isNumeric(userNumber)) {
-//             alert(evenOrOddMessage(userNumber));
-//
-//             alert(numberPlus100Message(userNumber));
-//
-//             alert(negativePositiveMessage(userNumber));
-//         } else {
-//             alert("This is not a number you dummy.");
-//         }
-//     }
-// }
-//
-// getUserNumAndInfo();
+function isNumeric(input) {
+    return !isNaN(input);
+}
+
+function evenOrOddMessage(input) {
+    return (input % 2 === 0 ? "This number is even!" : "This number is odd!");
+}
+
+function numberPlus100Message(input) {
+    return input + " plus 100 equals " + (input + 100) + "!";
+}
+
+function negativePositiveMessage(input) {
+    return input < 0 ? "This number is negative!" : "This number is positive!";
+}
+
+function getUserNumAndInfo() {
+    var enterNumber = confirm("Would you like to enter a number?")
+    var userNumber
+
+    if (enterNumber) {
+        userNumber = parseFloat(prompt("Please enter a number."));
+        if (isNumeric(userNumber)) {
+            alert(evenOrOddMessage(userNumber));
+
+            alert(numberPlus100Message(userNumber));
+
+            alert(negativePositiveMessage(userNumber));
+        } else {
+            alert("This is not a number you dummy.");
+        }
+    }
+}
+
+getUserNumAndInfo();
 
 
 // function isNumeric(input) {

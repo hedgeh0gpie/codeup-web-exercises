@@ -175,6 +175,9 @@
 function CreateBook(title, author){
     this.title = title;
     var splitNames = author.split(' ');
+    if (splitNames[1] === undefined) {
+        splitNames[1] = "";
+    }
     this.author = {
         firstName: splitNames[0],
         lastName: splitNames[1]

@@ -165,13 +165,6 @@
      *   `showBookInfo` function.
      */
 
-    // function CreateBook(title, author){
-    //     this.title = title;
-    //     var splitNames = author.split(' ');
-    //     author = splitNames[0] + " " + splitNames[1];
-    //     this.author = author;
-    // };
-
 function CreateBook(title, author){
     this.title = title;
     var splitNames = author.split(' ');
@@ -199,7 +192,8 @@ function showBookInfo(book) {
         }
     }
 
-booksRefactored.forEach(function(book) {
+booksRefactored.forEach(function(book, index) {
+    console.log("Book #" + ++index);
     showBookInfo(book);
 })
 

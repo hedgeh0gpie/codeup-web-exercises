@@ -1,3 +1,76 @@
 h1 {
     color:  purple;
+    text-decoration:    underline;
+}
+
+h2 {
+    text-decoration:    underline;
+}
+
+#heading {
+    text-align:   center;
+}
+
+html {
+    /*background-color:   lavender;*/
+    background-image:   url("../img/double-bubble-outline.png");
+    font-family: 'Lexend', sans-serif;
+}
+
+ul {
+    list-style: square;
+}
+
+ol {
+    list-style: none;
+}
+
+table, td, tr {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding:    10px;
+    font-size:  1.05em;
+}
+
+a:link {
+    color:  hotpink;
+}
+
+a:visited {
+    color:  purple;
+}
+
+a:hover {
+    color:  orange;
+}
+
+a:active {
+    color:  white;
+}
+
+.card {
+    text-align: center;
+
+    width:  300px;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: auto;
+
+}
+
+#card1 {
+    background-color:   pink;
+}
+
+#card2 {
+    background-color:   blue;
+}
+
+#card3 {
+    background-color:   orange;
+}
+
+#vision {
+    text-align: center;
 }

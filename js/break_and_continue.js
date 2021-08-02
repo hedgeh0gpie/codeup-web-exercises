@@ -4,17 +4,16 @@ var oddNumber = prompt("Please enter an odd number between 1 and 50.");
 
 while ((oddNumber % 2 === 0) || (oddNumber > 50) || (oddNumber < 1)) {
     alert("Stop playing around.");
-    var oddNumber = prompt("Please enter an odd number between 1 and 50.");
+    oddNumber = prompt("Please enter an odd number between 1 and 50.");
+    if ((oddNumber % 2 === 1) && (oddNumber <= 50) && (oddNumber >= 1)) {
+        break;
+    }
 }
 
-for (var i = 1; i <= 50; i++) {
-
-    if (i % 2 === 0) {
+for (var i = 1; i <= 50; i += 2) {
+    if (i == oddNumber) {
+        console.log("Number to skip: " + oddNumber)
         continue;
-
-    }
-    if (i === oddNumber) {
-        console.log("Skipping number " + oddNumber);
     }
     console.log(i);
 }

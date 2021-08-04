@@ -9,32 +9,6 @@
 <body>
 
   <main>
-<!--    <nav class="navbar navbar-expand-lg navbar-light bg-light">-->
-<!--      <ul class="navbar-nav mr-auto">-->
-<!--        <li class="nav-item active">-->
-<!--          <a class="nav-link active" href="#">Pizza world<span class="sr-only">(current)</span></a>-->
-<!--        </li>-->
-<!--        <li class="nav-item active">-->
-<!--          <a class="nav-link" href="#">Order online</a>-->
-<!--        </li>-->
-<!--        <li class="nav-item active">-->
-<!--          <a class="nav-link" href="#">Menu</a>-->
-<!--        </li>-->
-
-<!--        <form class="form-inline">-->
-<!--          <input class="form-control mr-sm-2" type="search" placeholder="Zip code" aria-label="Search">-->
-<!--          <button class="btn my-2 my-sm-0" type="submit">Search stores near you!</button>-->
-<!--        </form>-->
-<!--      </ul>-->
-
-<!--      <a class="nav-link" id="signup" href="#">Sign up</a>-->
-<!--    </nav>-->
-
-<!--    <div class="jumbotron">-->
-<!--        <h1 class="display-4">Welcome to Pizza World!</h1>-->
-<!--      </div>-->
-<!--    </div>-->
-
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <a class="navbar-brand" href="#">Pizza world</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -67,80 +41,92 @@
 
     <h2>Build your own pizza!</h2>
 
-    <ul class="nav nav-tabs">
-      <li class="nav-item">
-        <a class="nav-link active" href="#"><span class="badge badge-pill badge-secondary">1</span> Size and crust</a>
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <a class="nav-link active" id="sizeAndCrust-tab" data-toggle="tab" href="#sizeAndCrust" role="tab" aria-controls="sizeAndCrust" aria-selected="true"><span class="badge badge-pill badge-secondary">1</span> Size and crust</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#"><span class="badge badge-pill badge-secondary">2</span> Cheese and Sauce</a>
+      <li class="nav-item" role="presentation">
+        <a class="nav-link" id="cheeseAndSauce-tab" data-toggle="tab" href="#cheeseAndSauce" role="tab" aria-controls="cheeseAndSauce" aria-selected="false"><span class="badge badge-pill badge-secondary">2</span> Cheese and Sauce</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#"><span class="badge badge-pill badge-secondary">3</span> Toppings</a>
+      <li class="nav-item" role="presentation">
+        <a class="nav-link" id="toppings-tab" data-toggle="tab" href="#toppings" role="tab" aria-controls="toppings" aria-selected="false"><span class="badge badge-pill badge-secondary">3</span> Toppings</a>
       </li>
     </ul>
 
-    <div class="card text-center">
-      <div class="card-header text-white bg-primary text-left">
-        Choose size and crust
-      </div>
-      <div class="card-body">
-
-        <div class="card text-left">
-          <div class="card-header">
-            Hand Tossed
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="sizeAndCrust" role="tabpanel" aria-labelledby="sizeAndCrust-tab">
+        <div class="card text-center">
+          <div class="card-header text-white bg-primary text-left">
+            Choose size and crust
           </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">Garlic seasoned crust with a rich, buttery taste.</li>
-            <li class="list-group-item">
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="handTossedRadios" id="handTossedSmall" value="handTossedSmall">
-                <label class="form-check-label" for="handTossedSmall">
-                  Small (10")
-                </label>
-              </div>
-            </li>
-            <li class="list-group-item">
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="handTossedRadios" id="handTossedMedium" value="handTossedMedium">
-                <label class="form-check-label" for="handTossedMedium">
-                  Medium (12")
-                </label>
-              </div>
-            </li>
-          </ul>
-        </div>
+          <div class="card-body">
 
-        <br>
+            <div class="card text-left">
+              <div class="card-header">
+                Hand Tossed
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Garlic seasoned crust with a rich, buttery taste.</li>
+                <li class="list-group-item">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="handTossedRadios" id="handTossedSmall" value="handTossedSmall">
+                    <label class="form-check-label" for="handTossedSmall">
+                      Small (10")
+                    </label>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="handTossedRadios" id="handTossedMedium" value="handTossedMedium">
+                    <label class="form-check-label" for="handTossedMedium">
+                      Medium (12")
+                    </label>
+                  </div>
+                </li>
+              </ul>
+            </div>
 
-        <div class="card text-left">
-          <div class="card-header">
-            Crispy Thin
+            <br>
+
+            <div class="card text-left">
+              <div class="card-header">
+                Crispy Thin
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Thin enough for optimum crispy to crunchy ratio.</li>
+                <li class="list-group-item">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="crispyThinRadios" id="crispyThinMedium" value="crispyThinMedium">
+                    <label class="form-check-label" for="crispyThinMedium">
+                      Medium (12")
+                    </label>
+                  </div>
+                </li>
+
+                <li class="list-group-item">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="crispyThinRadios" id="crispyThinLarge" value="crispyThinLarge">
+                    <label class="form-check-label" for="crispyThinLarge">
+                      Large (14")
+                    </label>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
           </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">Thin enough for optimum crispy to crunchy ratio.</li>
-            <li class="list-group-item">
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="crispyThinRadios" id="crispyThinMedium" value="crispyThinMedium">
-                <label class="form-check-label" for="crispyThinMedium">
-                  Medium (12")
-                </label>
-              </div>
-            </li>
-
-            <li class="list-group-item">
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="crispyThinRadios" id="crispyThinLarge" value="crispyThinLarge">
-                <label class="form-check-label" for="crispyThinLarge">
-                  Large (14")
-                </label>
-              </div>
-            </li>
-          </ul>
+          <div class="card-footer text-right">
+            <a href="#" class="btn btn-primary text-right">Next step ›</a>
+          </div>
         </div>
-
       </div>
-      <div class="card-footer text-right">
-        <a href="#" class="btn btn-primary text-right">Next step ›</a>
+
+      <div class="tab-pane fade" id="cheeseAndSauce" role="tabpanel" aria-labelledby="cheeseAndSauce-tab">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa ducimus est et eum, explicabo facere ipsum nam natus nesciunt nobis nulla numquam officia provident quaerat quas quos reprehenderit repudiandae, voluptatem!
+      </div>
+
+      <div class="tab-pane fade" id="toppings" role="tabpanel" aria-labelledby="toppings-tab">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus asperiores beatae consequuntur deleniti ea expedita laboriosam magni praesentium quasi velit. Ab ipsum odit, recusandae sunt ut voluptates! Accusantium deleniti, voluptate.
       </div>
     </div>
 

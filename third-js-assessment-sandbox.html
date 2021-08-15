@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Third JS Assessment Sandbox</title>
+</head>
+<body>
+<script>
+  "use strict";
+
+  function capitalizeName(str) {
+    var splitNames = str.split(' ');
+    var firstName = splitNames[0];
+    var lastName = splitNames[1];
+    console.log(firstName[0].toUpperCase());
+    console.log(firstName.slice(1));
+    var firstNameCapitalized = firstName[0].toUpperCase() + firstName.slice(1)
+    var lastNameCapitalized = lastName[0].toUpperCase() + lastName.slice(1)
+    console.log(firstNameCapitalized + " " + lastNameCapitalized);
+  }
+
+  capitalizeName('ron weasley');
+
+</script>
+
+</body>
+</html>

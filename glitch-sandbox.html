@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Glitch Sandbox</title>
+</head>
+<body>
+<script>
+    // function productOfAll(sequence) {
+    //     var num = sequence[0];
+    //     for (var i = 1; i < sequence.length; i++) {
+    //         console.log("sequence[i] is " + sequence[i]);
+    //         num = num * sequence[i];
+    //         console.log("num is " + num);
+    //     }
+    //     return num;
+    // }
+    //
+    // console.log(productOfAll([1, 2, 3]));// Expect 6
+    // console.log(productOfAll([3, 4, 5]));// Expect 60
+    // console.log(productOfAll([2, 2, 3, 0]));// Expect 0
+
+    function getHighestNumber(sequence) {
+        sequence.sort(function(a, b){return b - a});
+        return sequence[0];
+    }
+
+    console.log(getHighestNumber([1, 2, 3]));// 3
+    console.log(getHighestNumber([1, 5, 2, 3, 4]));// 5
+    console.log(getHighestNumber([5, 1, 2, 4, 9]));// 9
+
+
+</script>
+
+</body>
+</html>

@@ -3,30 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <title>jQuery Exercises</title>
-</head>
-<body>
     <script
             src="https://code.jquery.com/jquery-2.2.4.js"
             integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
             crossorigin="anonymous"></script>
 
+</head>
+<body>
+
+
+    <h1 id="boy">Boy</h1>
+    <p id="am">am</p>
+    <ul id="ul">
+        <li id="i" class="list">I</li>
+    </ul>
+    <div id="tired" class="div">tired</div>
+
+
     <script>
 
-      "use strict";
+        "use strict";
 
-      $(document).ready(function() {
+        $(document).ready(function() {
+            $('li').css('font-size', '20px');
 
-      });
+            $('h1, p, li').css('background-color', '#FFFF00');
+
+            var h1Contents = $('h1').html();
+            var pContents = $('p').html();
+            var liContents = $('li').html();
+            alert(h1Contents);
+            alert(pContents);
+            alert(liContents);
+
+        });
 
     </script>
-
-<h1 id="boy" class="heading">Boy</h1>
-<p id="am" class="paragraph">am</p>
-<ul id="ul" class="ul">
-    <li id="i" class="list">I</li>
-</ul>
-<div id="tired" class="div">tired</div>
-
 
 
 

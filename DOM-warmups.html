@@ -3,25 +3,79 @@
 <head>
   <meta charset="UTF-8">
   <title>DOM Warmups</title>
+<!--  <script-->
+<!--          src="https://code.jquery.com/jquery-2.2.4.js"-->
+<!--          integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="-->
+<!--          crossorigin="anonymous"></script>-->
 </head>
+
 <body>
-<h1 id="goodMorning">Good Morning, Draco!</h1>
-<button id="afternoon">It's afternoon</button>
-<script>
-  "use script";
+
+  <h1 id="goodMorning">Good Morning, Draco!</h1>
+  <button id="afternoon">It's afternoon</button>
+  <Section>
+    <button data-value="1" id="button1">Change Me</button>
+    <button data-value="2" id="button2">Change Me too</button>
+    <button data-value="3" id="button3">Don't forget about me!</button>
+    <p id="message"></p>
+
+  </Section>
+  <button id="reset">Reset</button>
+  <script
+          src="https://code.jquery.com/jquery-2.2.4.js"
+          integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+          crossorigin="anonymous">
+  </script>
+  <script>
+    "use script";
 
 
-  // JAVIER'S SOLUTION
+    // JAVIER'S SOLUTION******
 
-  var afternoonButton = document.getElementById("afternoon");
-  var header = document.getElementById("goodMorning");
-  var changeHeader = function() {
-    header.innerHTML = "Good Afternoon, Draco!";
-  }
+    var afternoonButton = document.getElementById("afternoon");
+    var header = document.getElementById("goodMorning");
+    var changeHeader = function() {
+      header.innerHTML = "Good Afternoon, Draco!";
+    }
 
-  afternoonButton.addEventListener('click', changeHeader);
+    afternoonButton.addEventListener('click', changeHeader);
+
+    // MY SOLUTION************************
+
+    // $('button').hover(
+    //         function() {
+    //           $(this).css('background-color', 'hotpink');
+    //         },
+    //         function() {
+    //           $(this).css('background-color', 'white');
+    //         }
+    // );
+
+    // JAVIER'S SOLUTION******
+
+    $('section button').hover(
+            function(e){
+              $(e.target).css("background-color", "hotpink");
+              var number = $(this).attr("data-value");
+              $("#message").html(number);
+            },
+            function(e){
+              $(e.target).css("background-color", "unset");
+              $("#message").html("");
+            }
+    );
+
+    $("#reset").click(function(){
+      location.reload();
+    });
 
 
-</script>
+  </script>
+
+<!--  <script-->
+<!--          src="https://code.jquery.com/jquery-2.2.4.js"-->
+<!--          integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="-->
+<!--          crossorigin="anonymous"></script>-->
+
 </body>
 </html>

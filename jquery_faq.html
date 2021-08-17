@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery FAQ</title>
+
+    <script
+            src="https://code.jquery.com/jquery-2.2.4.js"
+            integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+            crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <style>
+
+        .invisible {
+            display: none;
+        }
+
+    </style>
+
+    <h1>10 FAQs on National Parks</h1>
+
+  <dl>
+    <dt>National Park Service</dt>
+        <dd class="invisible">The National Park Service protects over 84 million acres of wild landscapes and historic sites.</dd>
+
+      <dt>Yellowstone</dt>
+        <dd class="invisible">Yellowstone National Park (in Wyoming, Idaho, and Montana) is the oldest U.S. national park, founded in 1872.</dd>
+
+      <dt>Mackinac</dt>
+        <dd class="invisible">The second U.S. national park created is no longer a national park. Mackinac National Park in Michigan was established in 1875 and was returned to the state in 1895. It is now one of Michigan's State Parks. </dd>
+
+      <dt>Yosemite</dt>
+        <dd class="invisible">Three of the 10 highest waterfalls in the world are located in Yosemite National Park in California.</dd>
+
+      <dt>Yosemite</dt>
+        <dd class="invisible">Ribbon Falls in Yosemite is nine times taller than Niagara Falls.</dd>
+
+      <dt>Death Valley</dt>
+        <dd class="invisible">One of the hottest temperatures on earth was recorded in 1913 in Death Valley National Park, registering 134 degrees.</dd>
+
+      <dt>Grand Canyon</dt>
+        <dd class="invisible">The Grand Canyon, in Grand Canyon National Park in Arizona, is known as one of the Seven Natural Wonders of the World.</dd>
+
+      <dt>National Parks</dt>
+        <dd class="invisible">National parks are home to life on a big scale: Sequoia trees are some of the world's largest living things, and Alaskan brown bears are some of the world's largest carnivores.</dd>
+
+      <dt>Sequoia</dt>
+        <dd class="invisible">California's Sequoia National Park is home to the largest living single-stem tree in the world, the wonderfully named General Sherman. The tree is approximately 275 feet tall and weighs approximately 1,900 metric tons.</dd>
+
+      <dt>Sequoia</dt>
+        <dd class="invisible">When a giant sequoia tree fell and blocked a road in Sequoia National Park in California in 1937, the National Park Service simply created a tunnel through the 275-foot by 21-foot tree.</dd>
+  </dl>
+
+    <ul>
+        <h3>The Park</h3>
+        <li>Fact</li>
+        <li>Fact</li>
+        <li>Fact</li>
+        <li>Fact</li>
+    </ul>
+    <ul>
+        <h3>The Other Park</h3>
+        <li>Fact</li>
+        <li>Fact</li>
+        <li>Fact</li>
+        <li>Fact</li>
+    </ul>
+
+    <ul>
+        <h3>Yet Other Park</h3>
+        <li>Fact</li>
+        <li>Fact</li>
+        <li>Fact</li>
+        <li>Fact</li>
+    </ul>
+
+    <script>
+        $(document).ready(function() {
+
+            $("dt").click(function(event){
+                event.preventDefault();
+                $('dd').toggleClass("invisible");
+            });
+        });
+    </script>
+
+
+
+
+
+</body>
+</html>

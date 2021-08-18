@@ -20,7 +20,17 @@
     <p id="message"></p>
 
   </Section>
+
   <button id="reset">Reset</button>
+  <section>
+    <input type="text" id="wordToDisplay">
+    <button id="displayWord">Display in DOM</button>
+    <p id="word"></p>
+  </section>
+  <section>
+    <button id="create-an-element">Create an Element</button>
+  </section>
+
   <script
           src="https://code.jquery.com/jquery-2.2.4.js"
           integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
@@ -69,6 +79,27 @@
       location.reload();
     });
 
+
+
+    // MY SOLUTION**************
+    // $('#displayWord').click(function() {
+    //   var input = $('#wordToDisplay').val();
+    //   $("#message").html(input); // Didn't work because #message is hidden... 🙈 CLOSE BUT NO CIGAR
+    // });
+
+
+    // JAVIER'S SOLUTION******
+    // Cause word to be displayed when button is clicked
+
+    $('#displayWord').on('click', function() {
+      // var word = $("#wordToDisplay").val();
+      // $('#word').html(word);
+      $('#word').html($('#wordToDisplay').val()); // One line version
+    });
+
+    $('#create-an-element').on('click', function() {
+      $(this).after('<p>I am new</p>');
+    });
 
   </script>
 

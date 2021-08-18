@@ -18,6 +18,7 @@
     </thead>
     <tbody id="insertProducts"></tbody>
 </table>
+<button id="loadData">Refresh</button>
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
@@ -33,25 +34,33 @@
     //             its contents and fields
     //       HINT: You will want to target #insertProducts for your new HTML elements
 
-    $.ajax("data/inventory.json").done(function(data, status, jqXhr) {
-        alert("AJAX call completed successfully!");
-        console.log("Request status: " + status);
-        console.log("Data returned from server:");
-        console.log(data);
 
-        data.forEach(function(item) {
-            console.log(item.title);
-            console.log(item.quantity);
-            console.log(item.price);
-            console.log(item.categories);
-            $('#insertProducts').append('<tr>' + '<td>' + item.title + '</td>' +
-                '<td>' + item.quantity + '</td>' +
-                '<td>' + item.price + '</td>' +
-                '<td>' + item.categories + '</td>' +
-                '</tr>');
+        // alert("AJAX call completed successfully!");
+        // console.log("Request status: " + status);
+        // console.log("Data returned from server:");
+        // console.log(data);
+
+
+    function getData() {
+        $.ajax("data/inventory.json").done(function (data, status, jqXhr) {
+            data.forEach(function (item) {
+                $('#insertProducts').append('<tr>' +
+                    '<td>' + item.title + '</td>' +
+                    '<td>' + item.quantity + '</td>' +
+                    '<td>' + item.price + '</td>' +
+                    '<td>' + item.categories.join(', ') + '</td>' +
+                    '</tr>');
+            });
         });
+    }
 
+    getData();
+
+    $('#loadData').click(function() {
+        $("#insertProducts").html('');
+        getData();
     });
+
 })();
 </script>
 

@@ -38,3 +38,43 @@ const users = [
     }
 ];
 
+const threeOrMoreLanguages = users.filter(user => user.languages.length >= 3);
+
+const emails = users.map(user => user.email);
+
+const averageYearsOfExperience = users.reduce((totalYears, currentUser) => {
+    return totalYears + currentUser.yearsOfExperience;
+}, 0) / 5;
+
+
+let holdEmail = "";
+const longestEmail = users.reduce((accumulator, currentUser) => {
+    if (currentUser.email.length > holdEmail.length) {
+        holdEmail = currentUser.email
+    }
+    return holdEmail;
+}, 0)
+
+
+// CHRIS SOLUTION
+// var longestEmail = users.reduce((accumulator, currentUser, index, array) => {
+//     if(accumulator.email.length > currentUser.email.length){
+//         return accumulator;
+//     } else {
+//         return currentUser;
+//     }
+// }).email;
+
+// PARIS' SOLUTION
+// let longestEmail = users.reduce((a,b) => {
+//     if (a.length < b.email.length) {
+//         a = b.email
+//     }
+//     return a
+// }, '')
+// console.log(longestEmail)
+
+const userNameList = users.reduce((accumulator, currentUser) => {
+    return accumulator + currentUser.email + " ";
+}, "");
+

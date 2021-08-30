@@ -44,7 +44,7 @@ const emails = users.map(user => user.email);
 
 const averageYearsOfExperience = users.reduce((totalYears, currentUser) => {
     return totalYears + currentUser.yearsOfExperience;
-}, 0) / 5;
+}, 0) / users.length;
 
 
 let holdEmail = "";
@@ -56,8 +56,8 @@ const longestEmail = users.reduce((accumulator, currentUser) => {
 }, 0)
 
 
-// CHRIS SOLUTION
-// var longestEmail = users.reduce((accumulator, currentUser, index, array) => {
+// CHRIS' SOLUTION
+// var longestEmail = users.reduce((accumulator, currentUser) => {
 //     if(accumulator.email.length > currentUser.email.length){
 //         return accumulator;
 //     } else {
@@ -74,7 +74,16 @@ const longestEmail = users.reduce((accumulator, currentUser) => {
 // }, '')
 // console.log(longestEmail)
 
-const userNameList = users.reduce((accumulator, currentUser) => {
-    return accumulator + currentUser.email + " ";
+// PARIS' SOLUTION REFACTORED BY NICHOLAS
+// let longestEmail = users.reduce(((a, b) => a.length < b.email.length ? a = b.email : a), '')
+
+// Not done
+const userNameList = "Your instructors are: " + users.reduce((accumulator, currentUser) => {
+    return accumulator + currentUser.name + ", ";
 }, "");
 
+
+// BONUS
+// const listOfLanguages = users.reduce(function(accumulator, currentUser, index, array) {
+//
+// }, "");
